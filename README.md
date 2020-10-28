@@ -27,3 +27,11 @@ Created with Vscode for React Rest Api
 
 
 12.)In postRouter.js,import the author and posts models and then create a get method that responds the json format of  fetched posts data along the author name using async and await from the database .(check @ "http://localhost:8080/Posts" to see the output)
+
+13.)yarn add body-parser
+
+14.)use body-parser as middleware in index.js
+
+15.)create post method in postrouter.js to post the data in posts of individual author.
+
+16.)in authorRouter.js,create the get and post method for authors and import it in index.js with app.use()
