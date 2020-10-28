@@ -35,3 +35,5 @@ Created with Vscode for React Rest Api
 15.)create post method in postrouter.js to post the data in posts of individual author.
 
 16.)in authorRouter.js,create the get and post method for authors and import it in index.js with app.use()
+
+17.)In postrouter.js ,creat a get method for getting individual post using post ID(http://localhost:8080/Posts/5f97cc2f550a972a14ac7932)

@@ -1,6 +1,7 @@
 const express=require("express")
 
 const author=require("../models/author")
+const Posts = require("../models/posts")
 
 const post=require("../models/posts")
 
@@ -17,7 +18,22 @@ PostRouter.get("/",async(req,res)=>{
         console.error(e);
         res.status(500).send("Internal server error")
     }
-}).post("/",async(req,res)=>{
+})
+
+.get("/:id",async(req,res)=>{//this will display the post using its individual post_id after  its been saved.
+    try {
+        const {id}=req.params
+        const Posts=await post.findById(id).populate("author")
+        res.status(200).json({
+            Posts
+        })
+    } catch (e) {
+        console.error(e)
+        res.status(500).send("Internal Get server Error")
+    }
+})
+
+.post("/",async(req,res)=>{
 try{
     const {title,content,authorId}=req.body
     const result=await new post({
