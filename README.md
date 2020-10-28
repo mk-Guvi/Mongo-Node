@@ -36,4 +36,28 @@ Created with Vscode for React Rest Api
 
 16.)in authorRouter.js,create the get and post method for authors and import it in index.js with app.use()
 
-17.)In postrouter.js ,creat a get method for getting individual post using post ID(http://localhost:8080/Posts/5f97cc2f550a972a14ac7932)
+17.)In postrouter.js ,create a get method for getting individual post using post ID(http://localhost:8080/Posts/5f97cc2f550a972a14ac7932)
+
+18.)create Admin.js file under models and create admin schema for it .
+
+19.)create seedAdmin.js file under seeds folder
+
+20.)yarn add bcrypt
+
+21.) create services folder under src and create hash.js file init.
+
+22.)In hash.js file create generatehash function and import it in seedAdmin.js file
+
+23.)In seedAdmin.js file, using the generatehash function create the seedAdmin function  that saves the passsword in the Db as hashed format and finally call seedAdmin() to verify and run $ node ./src/seeds/seedAdmin.js.
+
+24.)create clearAdmin function in seedadmin.js to remove the admin.
+
+NOTE:
+
+Rest Api's are api end points for retreiving and working with diferent resources from the serverside.
+
+Anytime you call the given resource it will get the output immediately.
+
+Api is stateless that is it doesnt deponds on anyother rest API
+
+To retrive the data ,we are creating api endpoints in express(eg:app.use("/posts",PostRouter) where "/posts" is the api endpoint that is whenever the link is ends with "/posts" it rediects to postrouter(a midleware) file and does the getand post methods based on the url requests.)
