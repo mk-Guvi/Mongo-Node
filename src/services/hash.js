@@ -14,8 +14,20 @@ const generateHash=plaintextpassword=>{
     })
 }
 
-const Comparehash=()=>{
+const Comparehash=(plaintextpassword,Hashpassword)=>{
+    return new Promise((resolve,reject)=>{
+        bcrypt.compare(plaintextpassword,Hashpassword,(err,result)=>{
+            if(err){
+                reject(err)
+            }
+            else{
+                resolve(result)
+            }
+        })
+    })
 
 }
 
 exports.generateHash=generateHash
+
+exports.Comparehash=Comparehash

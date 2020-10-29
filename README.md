@@ -61,3 +61,19 @@ Anytime you call the given resource it will get the output immediately.
 Api is stateless that is it doesnt deponds on anyother rest API
 
 To retrive the data ,we are creating api endpoints in express(eg:app.use("/posts",PostRouter) where "/posts" is the api endpoint that is whenever the link is ends with "/posts" it rediects to postrouter(a midleware) file and does the getand post methods based on the url requests.)
+
+25.)create adminRouter.js file under Routers and create a Post method for login APi init.(NOTE: create comparehash and import init).After creating the AdminRouter import it in the index.js file.
+
+
+26.) yarn add jsonwebtoken
+
+27.)create adminTokenManager.js file under services folder to create the jwt token(adminTokenGenerator) and import it in the adminRouter.js.
+
+
+28.)create the comparehash funtion  in hash.js and import it in AdminRouter.js file.
+
+29.)import adminTokenGenerator in adminRouer.js (to get the jwt token) from adminTokenmanager.js file and then create the jwtToken for email.
+
+30.)yarn add cookie-parser(to store the jwtToken safely  in cookies) and import it in ineds.js file as a middleware.
+
+31.)In adminRouter,add cookie for jwtToken after admin logins.

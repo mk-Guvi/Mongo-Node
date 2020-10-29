@@ -34,5 +34,5 @@ const clearAdmin=()=>{
 
 }
 // clearAdmin()
-seedAdmin()
+ seedAdmin()
 module.exports=seedAdmin

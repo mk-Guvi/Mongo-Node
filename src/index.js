@@ -17,7 +17,9 @@ const bodyParser = require("body-parser")
 const express= require("express")
 
 const PostRouter=require("../src/Routers/postRouter")
+const AdminRouter = require("./Routers/adminRouter")
 const AuthorRouter = require("./Routers/authorRouter")
+const cookieParser=require("cookie-parser")
 
 const app=express()
 
@@ -28,9 +30,12 @@ app.get("/",(req,res)=>{
   res.send("<h1>Blog Rest API</h1>")
 })
 
+app.use(cookieParser())
 app.use("/Posts",PostRouter)
 
 app.use("/Authors",AuthorRouter)
+
+app.use("/Admin",AdminRouter)
 app.listen(8080,()=>{
   console.log("server started @8080")
 })
