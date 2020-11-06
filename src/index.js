@@ -20,7 +20,7 @@ const PostRouter=require("../src/Routers/postRouter")
 const AdminRouter = require("./Routers/adminRouter")
 const AuthorRouter = require("./Routers/authorRouter")
 const cookieParser=require("cookie-parser")
-
+const cors=require("cors")
 const app=express()
 
 app.use(bodyParser.json())//used while posting the data into posts in  postman
@@ -31,11 +31,16 @@ app.get("/",(req,res)=>{
 })
 
 app.use(cookieParser())
+
+app.use(cors())
+
 app.use("/Posts",PostRouter)
 
 app.use("/Authors",AuthorRouter)
 
+
 app.use("/Admin",AdminRouter)
-app.listen(8080,()=>{
-  console.log("server started @8080")
+
+app.listen(7098,()=>{
+  console.log("server started @ 7098")
 })

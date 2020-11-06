@@ -77,3 +77,6 @@ To retrive the data ,we are creating api endpoints in express(eg:app.use("/posts
 30.)yarn add cookie-parser(to store the jwtToken safely  in cookies) and import it in ineds.js file as a middleware.
 
 31.)In adminRouter,add cookie for jwtToken after admin logins.
+
+32.)yarn add cors (so that api request for dfferent domains can be allowed)(cors-Cross ORigin resource Sharing) and call it as midleware in index.js file.
+
