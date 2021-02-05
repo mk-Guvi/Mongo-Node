@@ -1,12 +1,14 @@
 {
-  "name": "node-mongo",
+  "name": "node-mongoose",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "mongoose": "5.11.15"
+  },
   "devDependencies": {
     "nodemon": "1.18.4"
   },
