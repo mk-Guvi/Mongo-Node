@@ -1,5 +1,5 @@
 var http = require("http");
-require("./config/db");
+
 //create a server object:
 http
   .createServer(function (req, res) {
