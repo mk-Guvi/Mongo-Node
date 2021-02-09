@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://mk:mk@cluster0.pg8mj.mongodb.net/sampledb?retryWrites=true&w=majority",
+  "mongodb+srv://mk:mkm@cluster0.pg8mj.mongodb.net/sampledb?retryWrites=true&w=majority",
   { useNewUrlParser: true }
 );
 
