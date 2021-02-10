@@ -14,3 +14,5 @@ Created with CodeSandbox
 6.)In authorQueries.js,create save,findall,findbyId,fineone,findandupdate,findbyfirstname,findonebyfirstname queries and run in terminal using "node src/queries/authorQueries.js" command.Note:import the db connection file and the author schema file.
 
 7.)create book.js file under models and create the schema for books.
+
+8.)create BookQueries.js file in queries folder and create the queries for books.Note:import db config,author models file(as we use it for reference) and book models.
